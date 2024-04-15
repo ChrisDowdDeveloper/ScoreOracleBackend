@@ -4,5 +4,4 @@ function methodNotAllowed(req, res, next) {
         message: `${req.method} not allowed for ${req.originalUrl}`,
     });
 };
-
-export default methodNotAllowed;
+module.exports = methodNotAllowed;

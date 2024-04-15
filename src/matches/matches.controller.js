@@ -1,5 +1,5 @@
-import service from "./matches.service";
-import asyncErrorBoundary from "../errors/asyncErrorBoundary";
+const service = require( "./matches.service");
+const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 const listAllMatches = async(req, res) => {
     service.listAllMatches()

@@ -12,4 +12,4 @@ function asyncErrorBoundary(delegate, defaultStatus) {
     };
 }
 
-export default asyncErrorBoundary;
+module.exports = asyncErrorBoundary;

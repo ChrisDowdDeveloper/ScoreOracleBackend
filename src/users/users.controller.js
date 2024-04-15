@@ -1,5 +1,5 @@
-import service from "./users.service";
-import asyncErrorBoundary from "../errors/asyncErrorBoundary";
+const service = require("./users.service");
+const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 const VALID_FIELDS = [
     "username",

@@ -1,4 +1,4 @@
-import methodNotAllowed from "../errors/methodNotAllowed";
+const methodNotAllowed = require("../errors/methodNotAllowed");
 const router = require("express").Router();
 const controller = require("./teams.controller");
 
@@ -10,7 +10,7 @@ router.route("/:id")
 
 router.route("/")
     .get(controller.listAllTeams)
-    .create(controller.createTeam)
+    .post(controller.createTeam)
     .all(methodNotAllowed);
 
 module.exports = router;

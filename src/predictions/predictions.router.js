@@ -10,6 +10,7 @@ router.route('/:id')
 
 router.route('/')
     .get(controller.listAllPredictions)
-    .create(controller.createPrediction)
+    .post(controller.createPrediction)
+    .all(methodNotAllowed);
 
 module.exports = router;

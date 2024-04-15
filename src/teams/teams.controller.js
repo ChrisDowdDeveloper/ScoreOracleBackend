@@ -1,5 +1,5 @@
-import service from "./teams.service";
-import asyncErrorBoundary from "../errors/asyncErrorBoundary";
+const service = require("./teams.service");
+const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
 const listAllTeams = async(req, res) => {
     service.listAllTeams()

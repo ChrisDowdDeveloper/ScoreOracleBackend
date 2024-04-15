@@ -1,4 +1,4 @@
-import methodNotAllowed from '../errors/methodNotAllowed';
+const methodNotAllowed = require('../errors/methodNotAllowed');
 const router = require("express").Router();
 const controller = require("./users.controller");
 

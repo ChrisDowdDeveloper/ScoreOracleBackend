@@ -10,7 +10,8 @@ router.route("/:id")
 
 router.route('/')
     .get(controller.listAllRoles)
-    .create(controller.create)
+    .post(controller.create)
+    .all(methodNotAllowed);
 
 module.exports = router;
 

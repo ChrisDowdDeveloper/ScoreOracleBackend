@@ -5,7 +5,7 @@
  */
 
 require('dotenv').config();
-import { join } from "path";
+const { join } = require("path");
 
 const {
   DATABASE_URL = "postgresql://postgres@localhost/postgres",
@@ -15,7 +15,7 @@ const {
   DEBUG,
 } = process.env;
 
-export const development = {
+const development = {
     client: "postgresql",
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL_DEVELOPMENT,
@@ -27,7 +27,8 @@ export const development = {
     },
     debug: !!DEBUG,
 };
-export const test = {
+
+const test = {
     client: "postgresql",
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL_TEST,
@@ -39,7 +40,8 @@ export const test = {
     },
     debug: !!DEBUG,
 };
-export const preview = {
+
+const preview = {
     client: "postgresql",
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL_PREVIEW,
@@ -51,7 +53,8 @@ export const preview = {
     },
     debug: !!DEBUG,
 };
-export const production = {
+
+const production = {
     client: "postgresql",
     pool: { min: 1, max: 5 },
     connection: DATABASE_URL,
@@ -63,3 +66,5 @@ export const production = {
     },
     debug: !!DEBUG,
 };
+
+module.exports = { development, test, preview, production };
