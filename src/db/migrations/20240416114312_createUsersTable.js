@@ -1,4 +1,3 @@
-import { userIcon } from "../../resources";
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
@@ -12,7 +11,7 @@ exports.up = function(knex) {
     table.string("first_name").notNullable();
     table.string("last_name").notNullable();
     table.timestamp("date_joined").defaultTo(knex.fn.now());
-    table.string("profile_picture_url").defaultTo(userIcon);
+    table.string("profile_picture_url").defaultTo("/images/userIcon.png");
   })
 };
 
